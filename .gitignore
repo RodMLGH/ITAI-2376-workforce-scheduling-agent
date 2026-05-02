@@ -212,7 +212,10 @@ tempCodeRunnerFile.py
 # Marimo
 marimo/_static/
 marimo/_lsp/
-__marimo__/
+__marimo__/.gitignore 
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Additional
+outputs/
