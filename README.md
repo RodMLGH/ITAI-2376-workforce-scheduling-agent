@@ -1,5 +1,5 @@
 # ITAI-2376-workforce-scheduling-agent
-This repository is for storing the documentation for my ITAI2376 Deep Learning Project.
+This repository contains the code, synthetic data, and documentation for my ITAI 2376 Deep Learning final project.
 
 # Workforce Scheduling Optimization — Multi-Agent System
 
@@ -40,7 +40,7 @@ workforce_scheduling_agent/
 ├── data/
 │   ├── employees.csv
 │   └── demand_history.csv
-├── outputs/
+├── outputs/                              # Generated after running the workflow
 │   ├── forecast.json
 │   ├── forecast.csv
 │   ├── schedule.json
@@ -57,34 +57,40 @@ workforce_scheduling_agent/
 │   ├── validate_schedule.py
 │   ├── explain_schedule.py
 │   └── agents.py
-├── .env
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
+Create a local .env file in the project root. This file is not included in the repository.
 
 ## Installation
 
-From the project root, install the required packages: `python -m pip install -r requirements.txt`
-If needed, install manually: `python -m pip install pandas numpy scikit-learn tensorflow ortools google-genai python-dotenv crewai`
+From the project root, install the required packages:
+```bash
+python -m pip install -r requirements.txt
+
+If needed, install the packages manually:
+```bash
+python -m pip install pandas numpy scikit-learn tensorflow ortools google-genai python-dotenv crewai
 
 ## Gemini API Setup
 
-Create a `.env` file in the project root: 
+Create a `.env` file in the project root. This file is not included in the repository for security reasons.
 
+```text
 GEMINI_API_KEY=your_api_key_here
 GEMINI_MODEL=gemini-2.5-flash-lite
-Recommended `.gitignore` entry: .env
 
 ## How to Run the Project
 
 Run the full multi-agent workflow:
 `python src\agents.py`
-This runs the full CrewAI workflow from Demand Forecasting Agent to Scheduling & Explanation Agent.
+This runs the full CrewAI workflow from Demand Forecasting Agent to Scheduling and Explanation Agent.
 
 ## Output Files
 
-The project generates the following outputs:
+After running the workflow, the project generates the following output files:
+
 - `outputs/forecast.json` and `outputs/forecast.csv` (staffing demand forecast)
 - `outputs/schedule.json` and `outputs/schedule.csv` (optimized workforce schedule)
 - `outputs/schedule_summary.json` (high-level schedule metrics)
