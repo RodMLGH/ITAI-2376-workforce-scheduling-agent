@@ -35,7 +35,7 @@ The system performs the following workflow:
 
 ## Project Structure
 
-```text
+```
 workforce_scheduling_agent/
 ├── data/
 │   ├── employees.csv
@@ -61,23 +61,20 @@ workforce_scheduling_agent/
 ├── requirements.txt
 └── README.md
 ```
+
 Create a local .env file in the project root. This file is not included in the repository.
 
 ## Installation
 
 From the project root, install the required packages:
-```bash
-python -m pip install -r requirements.txt
+`python -m pip install -r requirements.txt`
 
 If needed, install the packages manually:
-```bash
-python -m pip install pandas numpy scikit-learn tensorflow ortools google-genai python-dotenv crewai
+`python -m pip install pandas numpy scikit-learn tensorflow ortools google-genai python-dotenv crewai`
 
 ## Gemini API Setup
 
 Create a `.env` file in the project root. This file is not included in the repository for security reasons.
-
-```text
 GEMINI_API_KEY=your_api_key_here
 GEMINI_MODEL=gemini-2.5-flash-lite
 
