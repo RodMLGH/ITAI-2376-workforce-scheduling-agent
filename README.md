@@ -57,6 +57,8 @@ workforce_scheduling_agent/
 │   ├── validate_schedule.py
 │   ├── explain_schedule.py
 │   └── agents.py
+├── workflow/
+│   ├── workf_sched_optim_flow.png
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -72,6 +74,8 @@ From the project root, install the required packages:
 If needed, install the packages manually:
 `python -m pip install pandas numpy scikit-learn tensorflow ortools google-genai python-dotenv crewai`
 
+This project was implemented and tested as a local Python application using a `requirements.txt` file for dependencies and a `.env` file for API credentials.
+
 ## Gemini API Setup
 
 Create a `.env` file in the project root. This file is not included in the repository for security reasons.
@@ -82,7 +86,7 @@ GEMINI_MODEL=gemini-2.5-flash-lite
 
 ## How to Run the Project
 
-Run the full multi-agent workflow:
+After installing the required packages and adding a Gemini API key, the full workflow can be run from the project root using: 
 `python src\agents.py`
 This runs the full CrewAI workflow from Demand Forecasting Agent to Scheduling and Explanation Agent.
 
